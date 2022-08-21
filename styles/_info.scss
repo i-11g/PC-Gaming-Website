@@ -1,0 +1,67 @@
+.info {
+  min-height: 80vh;
+  margin: 9rem 0rem;
+  padding: 9rem 0rem;
+  background: rgb(255, 255, 255);
+  @include flex(center, center, column);
+
+  // info img
+  .info-img {
+    position: relative;
+    margin: 3rem 2rem;
+    padding: 2rem 0rem;
+
+    // DESK 1
+    .desk1 {
+      position: absolute;
+      right: 3em;
+      top: -5em;
+    }
+    // // DESK 2
+    .desk2 {
+      position: relative;
+      left: 3em;
+      bottom: -5em;
+    }
+
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: cover;
+      box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.3);
+      border-radius: 1em;
+    }
+  }
+  // info text
+  .info-text {
+    width: 60%;
+    padding: 3rem 0rem;
+    p {
+      color: rgb(66, 66, 66);
+      text-align: center;
+      line-height: 2.5rem;
+      letter-spacing: 0.3rem;
+    }
+    // background-color: aquamarine;
+  }
+}
+
+@media screen and(max-width:650px) {
+  .info {
+    .info-text {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:950px) {
+  .info {
+    .info-text {
+      p {
+        text-align: start;
+      }
+    }
+  }
+}

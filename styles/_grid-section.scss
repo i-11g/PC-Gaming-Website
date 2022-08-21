@@ -1,0 +1,57 @@
+// img-grid
+.img-grid {
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+  padding: 5rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 30rem 30rem;
+  grid-gap: 2rem;
+  grid-template-areas:
+    "keyboard keyboard keyboard  mouse case case case"
+    "headspeaker screen screen screen case case case";
+  .shadow {
+    border-radius: 1em;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.5);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .keyboard {
+    grid-area: keyboard;
+  }
+  .mouse {
+    grid-area: mouse;
+  }
+  .case {
+    grid-area: case;
+  }
+  .screen {
+    grid-area: screen;
+  }
+  .headspeaker {
+    grid-area: headspeaker;
+  }
+}
+
+@media screen and(max-width:900px) {
+  .img-grid {
+    img {
+      width: 100%;
+      height: 30rem;
+    }
+    @include flex(center, center, column);
+
+    // grid-template-columns: 1fr;
+    // grid-template-rows: repeat(5, 1fr);
+    // grid-template-areas:
+    //   "keyboard"
+    //   "mouse"
+    //   "case"
+    //   "headspeaker"
+    //   "screen";
+  }
+}

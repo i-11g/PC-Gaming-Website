@@ -1,0 +1,73 @@
+.hero {
+  width: 80%;
+  margin: auto;
+  min-height: 50vh;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+
+  // BackGround //
+  .bg {
+    position: absolute;
+    width: 60rem;
+    z-index: -1;
+    right: 0%;
+    top: 0%;
+  }
+  // Hero LEFT //
+  .hero-left {
+    @include flex(center, start, column);
+    flex: 2 2 40rem;
+    padding: 2rem 0rem;
+
+    h1,
+    p {
+      margin-bottom: 5rem;
+    }
+    p {
+      color: rgb(144, 134, 134);
+    }
+    button {
+      padding: 1rem 4rem;
+      background: none;
+      border: 2px solid black;
+      border-radius: 5px;
+      transition: all 0.7s ease-in-out;
+      &:hover {
+        background: black;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Hero RIGHT //
+  .hero-right {
+    padding: 2rem 0rem;
+    @include flex(center, center, row);
+    flex: 1 1 30rem;
+
+    img {
+      width: 50rem;
+    }
+  }
+}
+
+// Media Query //
+
+@media screen and(max-width:1142px) {
+  .hero {
+    .hero-left {
+      @include flex(center, center, column);
+      text-align: center;
+    }
+    .hero-right {
+      img {
+        width: 100%;
+      }
+    }
+    .bg {
+      display: none;
+    }
+  }
+}

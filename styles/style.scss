@@ -1,0 +1,24 @@
+$header1: 4.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$bakcground-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "_nav";
+@import "_hero-section";
+@import "_search-section";
+@import "_grid-section";
+@import "_info";
+@import "_devices-section";
+@import "_footer";
+@import "global";
